@@ -1,59 +1,146 @@
 /*
-Theme Name: Thèmeblanc
+Theme Name: Surkrut2017
 Theme URI: http://comgraph.hear.fr/
 Description: Mon thème basé sur le thème de Francis Chouquet.
 Version: 0.1
-Author: Loïc Horellou
- 
-Une description si il faut.
-
+Author: Loïc Horellou & Pricilla Degardin
 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@font-face {
+    font-family: 'frankfurdregular';
+    src: url('font/frankfurd-webfont.eot');
+    src: url('font/frankfurd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/frankfurd-webfont.woff') format('woff'),
+         url('font/frankfurd-webfont.ttf') format('truetype'),
+         url('font/frankfurd-webfont.svg#frankfurdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+@font-face {
+    font-family: 'frankfurhigdregular';
+    src: url('font/frankfurhigd-webfont.eot');
+    src: url('font/frankfurhigd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/frankfurhigd-webfont.woff') format('woff'),
+         url('font/frankfurhigd-webfont.ttf') format('truetype'),
+         url('font/frankfurhigd-webfont.svg#frankfurhigdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
-body {
-	line-height: 1;
+
+body { 
+	font-family: 'Akkurat', sans-serif;
+	margin: 0 auto; 
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-ol, ul {
-	list-style: none;
+
+#page { 
+	margin: 0 auto 0 auto;
 }
-blockquote, q {
-	quotes: none;
+
+/* H E A D E R  H E A D E R  H E A D E R */
+
+#header { 
+	width: 90%;
+	margin-left: 5%;	
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+/* titre Surkrut */
+#header h1 a{ 
+	font-family: 'frankfurhigdregular';
+	font-size: 1.5em;
 }
-table {
+
+#header h1 a:link, a:visited, a:hover { 
+	color:black;
+	text-decoration: none;
+}
+
+/* sous titre */
+#header p {
+	font-size: 0.75em;
+	margin-top: -20px;
+}
+
+/* C O N T E N T  C O N T E N T  C O N T E N T */
+
+/* titre des articles */
+#content h2 { 
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-family: 'frankfurdregular';
+	color: black;
+	text-decoration: none; 
+}
+
+#content h2 a:link, a:visited, a:hover{ 
+	color: black;
+	text-decoration: none; 
+}
+
+.post {
+	border: solid 5px #40E3BD;
 	border-collapse: collapse;
-	border-spacing: 0;
+	position: fixed;
+	z-index: 3;
+	width: 56%;
+	height: 65%;
+	top: 17%;
+	left: 22%;
+
+	
+}
+
+/* données des articles (date, auteur, commentaire) */
+.postmetadata { 
+
+}
+
+/* corps de l'article */
+.post_content { 
+
+}
+
+/* S I D E B A R  S I D E B A R  S I D E B A R */
+
+/* bloc général pour "autres blogs" seulement */
+.sidebar {
+	border: solid 5px #40E3BD;
+	overflow: scroll;
+	position: fixed;
+	z-index: 2;
+	width: 25%; 
+	height: 65%;
+	top: 20%;
+	right: 15%;
+}
+
+/* titres de sidebar */
+.sidebar h2 { 
+	 text-transform: uppercase;
+}
+
+.sidebar ul{ 
+	list-style-type: none;
+}
+
+/* barre de recherche */
+#searchform {
+	border-bottom: solid 1px #40E3BD;
+}
+
+
+/* F O O T E R  F O O T E R  F O O T E R */
+
+#footer p {
+	color: #40E3BD;
+	font-size: 0.75em;
+}
+
+#footer p a{ 
+	color: #40E3BD;
+	text-decoration: none;
 }

@@ -21,9 +21,11 @@
 <body>
 
 <div id="page">
-	<div id="header">
-<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-<p class"description"><?php bloginfo('description'); ?></p>
-	</div>
+    <div id="header">
+      <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+      
+      <p class="description"><?php bloginfo('description'); ?></p>
+    </div>
+
 
 <!-- fin header.php -->
