@@ -3,7 +3,7 @@ Theme Name: Surkrut2017
 Theme URI: http://comgraph.hear.fr/
 Description: Mon thème basé sur le thème de Francis Chouquet.
 Version: 0.1
-Author: Loïc Horellou & Pricilla Degardin
+Author: Loïc Horellou & Pricilla Degardin avec l'aide de Eliott
 */
 
 @font-face {
@@ -35,20 +35,30 @@ body {
 	margin: 0 auto; 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: white;
 }
 
 #page { 
 	margin: 0 auto 0 auto;
 }
 
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
 /* H E A D E R  H E A D E R  H E A D E R */
 
 #header { 
 	width: 90%;
-	margin-left: 5%;	
+	margin-left: 5%;
+	background-color: white;	
 }
 
 /* titre Surkrut */
+#header h1 {
+	margin-bottom:0px;
+}
+
 #header h1 a{ 
 	font-family: 'frankfurhigdregular';
 	font-size: 1.5em;
@@ -62,75 +72,212 @@ body {
 /* sous titre */
 #header p {
 	font-size: 0.75em;
-	margin-top: -20px;
+	margin-top:0px;
 }
 
-/* C O N T E N T  C O N T E N T  C O N T E N T */
+/* à propos */
+#apropos {
+	text-decoration: none;
+	color: #40E3BD;
+	font-size: 0.75em;
+	top:7%;
+	right: 27%;
+	position: fixed;
+} 
 
-/* titre des articles */
-#content h2 { 
+
+/* barre de recherche */
+#searchform {
+	position: fixed;
+	top: 6%;
+	right: 10%;
+	
+	white-space: nowrap;
+	color: #40E3BD;
+	outline: none;
+}
+
+#searchform #field {
+	border-bottom: solid 1px #40E3BD;
+	border-top:0px;
+	border-right:0px;
+	border-left:0px;
+	outline: none;
+}
+
+#searchform #button {
+	cursor:pointer;
+}
+
+
+/* archive chronologique articles  */
+#chrono {
 	text-transform: uppercase;
 	font-size: 1.3em;
 	font-family: 'frankfurdregular';
 	color: black;
-	text-decoration: none; 
+	border: solid 5px #40E3BD;
+	position: fixed;
+	z-index: 1;
+	bottom:25%;
+	right:5%;
+	width:10%; 
+	height: auto;
+	background-color: white;
 }
 
-#content h2 a:link, a:visited, a:hover{ 
+#chrono:hover {
+	z-index:4;
+}
+
+#chrono ul, li{
+	list-style-type: none;
+	color: black;
+}
+
+#chrono a:link {
+	text-decoration: none;
+	color: black;	
+}
+
+#chrono a:hover {
+	text-decoration: none;
+	color: #40E3BD;
+}
+
+/* C O N T E N T  C O N T E N T  C O N T E N T */
+
+/* bloc principal */
+#content {
+	border: solid 5px #40E3BD;
+	border-collapse: collapse;
+	position: fixed;
+	background-color: white;
+	overflow: scroll;
+	z-index:3;
+	width: 56%;
+	height: 64%;
+	top: 18%;
+	left: 22%;
+	padding: 20px;
+}
+
+#content:hover {
+	z-index:4;
+}
+
+/* ligne articles (image + texte) */
+.post {
+	
+}
+
+/* titre des articles */
+.post h2 { 
+	text-transform: uppercase;
+	font-family: 'frankfurdregular';
+	font-size: 1.3em;
+	color: black;
+	text-decoration: none;
+	margin: 0;
+	padding-right:20px; 
+}
+
+.post h2 a:link, a:visited{ 
 	color: black;
 	text-decoration: none; 
 }
 
-.post {
-	border: solid 5px #40E3BD;
-	border-collapse: collapse;
-	position: fixed;
-	z-index: 3;
-	width: 56%;
-	height: 65%;
-	top: 17%;
-	left: 22%;
+.post h2 a:hover{ 
+	color: #40E3BD;
+}
 
-	
+.post .texte {
+	padding-left: 20px;
+	vertical-align: top;
+	width:60%;
+}
+
+.post img {
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	overflow:hidden;
+}
+
+.image{
+	border:none;
+	width: 40%;
+	height:24vh;
+	vertical-align: top;
 }
 
 /* données des articles (date, auteur, commentaire) */
 .postmetadata { 
-
+	font-size: 0.75em;
 }
 
 /* corps de l'article */
 .post_content { 
-
+	overflow: hidden;
 }
 
 /* S I D E B A R  S I D E B A R  S I D E B A R */
 
-/* bloc général pour "autres blogs" seulement */
 .sidebar {
+	z-index:2;
+	background-color: white;
 	border: solid 5px #40E3BD;
 	overflow: scroll;
 	position: fixed;
-	z-index: 2;
-	width: 25%; 
-	height: 65%;
-	top: 20%;
-	right: 15%;
 }
 
-/* titres de sidebar */
-.sidebar h2 { 
-	 text-transform: uppercase;
+.sidebar:hover {
+	z-index:4;
 }
 
-.sidebar ul{ 
+.sidebar ul, li, a { 
 	list-style-type: none;
+	color: black;
+	margin: 0px; 
+	padding-left: 0px;
 }
 
-/* barre de recherche */
-#searchform {
-	border-bottom: solid 1px #40E3BD;
+#blogroll {
+	width: 20%; 
+	height: 60%;
+	top: 25%;
+	right: 10%;	
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
+
+/* blogroll titre */
+#blogroll h3 { 
+	font-family: 'Akkurat', sans-serif;
+	padding-left: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+/* blogroll liens */
+#blogroll li {
+	padding-left: 20px;
+
+}
+
+#blogroll a:link {
+	text-decoration: none;
+}
+
+#blogroll a:hover {
+	color: #40E3BD;
+}
+
+
+
+
+
+
 
 
 /* F O O T E R  F O O T E R  F O O T E R */

@@ -24,7 +24,11 @@
     <div id="header">
       <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
       
-      <p class="description"><?php bloginfo('description'); ?></p>
+      <p><?php bloginfo('description'); ?></p>
+    
+      <a id="apropos" href="<?php echo get_page_link(2); ?>"><?php echo get_the_title(2); ?></a>
+
+      <div id="search"><?php include(TEMPLATEPATH . '/searchform.php'); ?></div>
     </div>
 
 
