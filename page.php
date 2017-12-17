@@ -2,6 +2,10 @@
 
 <!-- page.php -->
 
+<?php wp_nav_menu(array( 
+'theme_location' => 'menu-gauche', 
+'container_class' => 'menu' )); ?>
+
 <div id="content">
 	<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
@@ -22,4 +26,7 @@
 
 <!-- fin page.php -->
 
-<?php get_footer(); ?>
+<div id="chrono"><ul><?php wp_get_archives('type=yearly'); ?></ul></div>
+
+<?php get_sidebar(); ?>
+<?php wp_footer(); ?>

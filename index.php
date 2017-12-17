@@ -2,6 +2,10 @@
 
 <!-- index.php -->
 
+<?php wp_nav_menu(array( 
+'theme_location' => 'menu-gauche', 
+'container_class' => 'menu' )); ?>
+
 <div id="content">
 	<?php if(have_posts()) : ?>
 		<table>
@@ -35,4 +39,4 @@
 <!-- fin index.php -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php wp_footer(); ?>

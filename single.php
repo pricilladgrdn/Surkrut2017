@@ -2,7 +2,11 @@
 
 <!-- single.php -->
 
-<div id="content">
+<?php wp_nav_menu(array( 
+'theme_location' => 'menu-gauche', 
+'container_class' => 'menu' )); ?>
+
+<div id="content-article">
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
@@ -25,5 +29,3 @@
 </div>
 
 <!-- fin single.php -->
-
-<?php get_footer(); ?>

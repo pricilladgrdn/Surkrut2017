@@ -15,7 +15,6 @@ Author: Loïc Horellou & Pricilla Degardin avec l'aide de Eliott
          url('font/frankfurd-webfont.svg#frankfurdregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -27,7 +26,6 @@ Author: Loïc Horellou & Pricilla Degardin avec l'aide de Eliott
          url('font/frankfurhigd-webfont.svg#frankfurhigdregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body { 
@@ -56,7 +54,7 @@ h1, h2, h3, h4, h5 {
 
 /* titre Surkrut */
 #header h1 {
-	margin-bottom:0px;
+	margin-bottom: 0px;
 }
 
 #header h1 a{ 
@@ -65,14 +63,14 @@ h1, h2, h3, h4, h5 {
 }
 
 #header h1 a:link, a:visited, a:hover { 
-	color:black;
+	color: black;
 	text-decoration: none;
 }
 
-/* sous titre */
+/* sous-titre */
 #header p {
 	font-size: 0.75em;
-	margin-top:0px;
+	margin-top: 0px;
 }
 
 /* à propos */
@@ -80,18 +78,16 @@ h1, h2, h3, h4, h5 {
 	text-decoration: none;
 	color: #40E3BD;
 	font-size: 0.75em;
-	top:7%;
+	top: 7%;
 	right: 27%;
 	position: fixed;
 } 
-
 
 /* barre de recherche */
 #searchform {
 	position: fixed;
 	top: 6%;
 	right: 10%;
-	
 	white-space: nowrap;
 	color: #40E3BD;
 	outline: none;
@@ -99,49 +95,66 @@ h1, h2, h3, h4, h5 {
 
 #searchform #field {
 	border-bottom: solid 1px #40E3BD;
-	border-top:0px;
-	border-right:0px;
-	border-left:0px;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
 	outline: none;
 }
 
 #searchform #button {
-	cursor:pointer;
+	cursor: pointer;
 }
 
+/* M E N U  M E N U  M E N U  M E N U */
 
-/* archive chronologique articles  */
-#chrono {
-	text-transform: uppercase;
-	font-size: 1.3em;
-	font-family: 'frankfurdregular';
-	color: black;
-	border: solid 5px #40E3BD;
+/* cadre menu */
+ul.menu{
 	position: fixed;
-	z-index: 1;
-	bottom:25%;
-	right:5%;
-	width:10%; 
-	height: auto;
 	background-color: white;
+	top: 25%;
+	left: 5%;
+	width: 17.5%;
+	margin: 0px;
+	padding-left: 0px;
 }
 
-#chrono:hover {
-	z-index:4;
-}
-
-#chrono ul, li{
-	list-style-type: none;
-	color: black;
-}
-
-#chrono a:link {
+/* gros titres */
+ul.menu>li>a {
+	text-transform: uppercase;
 	text-decoration: none;
-	color: black;	
+	font-family: 'frankfurdregular';
+	font-size: 1.3em;
 }
 
-#chrono a:hover {
+ul.menu>li>a:hover {
+	color: #40E3BD;
+}
+
+/* border des gros titres */
+ul.menu>li {
+	padding: 20px;
+	border: solid 5px #40E3BD;
+}
+
+/* enlever le border bottom du premier gros titre */
+ul.menu>li:first-child { 
+	border-bottom: solid 0px;
+}
+
+/* padding entre gros titre et sous-titre */
+ul.menu>li>ul {
+	display: none;
+	padding: 0px;
+	padding-top: 20px;
+}
+
+/* sous-titre */
+ul.menu>li>ul>li>a {
 	text-decoration: none;
+	font-family: 'Akkurat';
+}
+
+ul.menu>li>ul>li>a:hover {
 	color: #40E3BD;
 }
 
@@ -149,12 +162,12 @@ h1, h2, h3, h4, h5 {
 
 /* bloc principal */
 #content {
+	z-index: 3;
+	position: fixed;
 	border: solid 5px #40E3BD;
 	border-collapse: collapse;
-	position: fixed;
 	background-color: white;
 	overflow: scroll;
-	z-index:3;
 	width: 56%;
 	height: 64%;
 	top: 18%;
@@ -163,7 +176,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #content:hover {
-	z-index:4;
+	z-index: 4;
 }
 
 /* ligne articles (image + texte) */
@@ -176,10 +189,10 @@ h1, h2, h3, h4, h5 {
 	text-transform: uppercase;
 	font-family: 'frankfurdregular';
 	font-size: 1.3em;
-	color: black;
 	text-decoration: none;
+	color: black;
 	margin: 0;
-	padding-right:20px; 
+	padding-right: 20px; 
 }
 
 .post h2 a:link, a:visited{ 
@@ -194,20 +207,20 @@ h1, h2, h3, h4, h5 {
 .post .texte {
 	padding-left: 20px;
 	vertical-align: top;
-	width:60%;
+	width: 60%;
 }
 
 .post img {
-	width:100%;
-	height:100%;
-	object-fit:cover;
-	overflow:hidden;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
 }
 
 .image{
-	border:none;
+	border: none;
 	width: 40%;
-	height:24vh;
+	height: 24vh;
 	vertical-align: top;
 }
 
@@ -221,10 +234,24 @@ h1, h2, h3, h4, h5 {
 	overflow: hidden;
 }
 
+/* A R T I C L E  A R T I C L E  A R T I C L E */
+
+#content-article {
+	z-index:3;
+	position: fixed;
+	background-color: white;
+	overflow: scroll;
+	margin: 20px;
+	width: 56%;
+	height: 75%;
+	top: 18%;
+	left: 22%;
+}
+
 /* S I D E B A R  S I D E B A R  S I D E B A R */
 
 .sidebar {
-	z-index:2;
+	z-index: 2;
 	background-color: white;
 	border: solid 5px #40E3BD;
 	overflow: scroll;
@@ -232,7 +259,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .sidebar:hover {
-	z-index:4;
+	z-index: 4;
 }
 
 .sidebar ul, li, a { 
@@ -262,7 +289,6 @@ h1, h2, h3, h4, h5 {
 /* blogroll liens */
 #blogroll li {
 	padding-left: 20px;
-
 }
 
 #blogroll a:link {
@@ -273,21 +299,39 @@ h1, h2, h3, h4, h5 {
 	color: #40E3BD;
 }
 
-
-
-
-
-
-
-
-/* F O O T E R  F O O T E R  F O O T E R */
-
-#footer p {
-	color: #40E3BD;
-	font-size: 0.75em;
+/* archive chronologique articles  */
+#chrono {
+	z-index: 1;
+	position: fixed;
+	border: solid 5px #40E3BD;
+	background-color: white;
+	text-transform: uppercase;
+	font-family: 'frankfurdregular';
+	font-size: 1.3em;
+	color: black;
+	right: 5%;
+	bottom: 25%;
+	height: auto;
+	padding: 20px;	
 }
 
-#footer p a{ 
-	color: #40E3BD;
+#chrono:hover {
+	z-index:4;
+}
+
+#chrono ul, li{
+	list-style-type: none;
+	color: black;
+	margin: 0px;
+	padding: 0px;
+}
+
+#chrono a:link {
 	text-decoration: none;
+	color: black;	
+}
+
+#chrono a:hover {
+	text-decoration: none;
+	color: #40E3BD;
 }

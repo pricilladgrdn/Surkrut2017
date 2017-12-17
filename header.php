@@ -31,5 +31,4 @@
       <div id="search"><?php include(TEMPLATEPATH . '/searchform.php'); ?></div>
     </div>
 
-
 <!-- fin header.php -->
